@@ -247,6 +247,8 @@ static const char DLL_about[] =
     "Thanks for test RDP:  Jabo, ziggy, angrylion\n"\
     "RSP driver examples:  bpoint, zilmar, Ville Linde";
 
+#endif
+
 static void init_regs(void)
 {
     register size_t i, j;
@@ -324,6 +326,8 @@ static void init_regs(void)
 #endif
     *CR[0xC] += *CR[0xD] + *CR[0xE] + *CR[0xF]; /* random total clock cycles */
 }
+
+#if !defined(M64P_PLUGIN_API)
 
 EXPORT void CALL CloseDLL(void)
 {
