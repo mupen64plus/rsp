@@ -387,7 +387,7 @@ EXPORT unsigned int CALL DoRspCycles(unsigned int cycles)
  * to finally empty the MM state, at the end of a long interpreter loop.
  */
 #ifdef ARCH_MIN_SSE2
-    _mm_empty();
+    //_mm_empty();
 #endif
 
     if (*CR[0x4] & SP_STATUS_BROKE) /* normal exit, from executing BREAK */
