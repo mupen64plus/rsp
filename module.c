@@ -31,6 +31,8 @@
 #include "module.h"
 #include "su.h"
 
+#include "m64p_common.h"
+
 #include <signal.h>
 #include <setjmp.h>
 
@@ -498,7 +500,7 @@ EXPORT unsigned int CALL DoRspCycles(unsigned int cycles)
 
 EXPORT void CALL GetDllInfo(PLUGIN_INFO *PluginInfo)
 {
-    PluginInfo -> Version = PLUGIN_API_VERSION;
+    PluginInfo -> Version = (u16) PLUGIN_API_VERSION;
     PluginInfo -> Type = PLUGIN_TYPE_RSP;
     strcpy(PluginInfo -> Name, "Static Interpreter");
     PluginInfo -> NormalMemory = 0;

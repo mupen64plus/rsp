@@ -34,6 +34,8 @@ pu8 DMEM;
 pu8 IMEM;
 unsigned long su_max_address = 0x007FFFFFul;
 
+static int temp_PC;
+
 NOINLINE void res_S(void)
 {
     message("RESERVED.");
@@ -1644,7 +1646,6 @@ void STV(unsigned vt, unsigned element, signed offset, unsigned base)
     return;
 }
 
-int temp_PC;
 #ifdef WAIT_FOR_CPU_HOST
 short MFC0_count[NUMBER_OF_SCALAR_REGISTERS];
 #endif
