@@ -6407,10 +6407,10 @@ FORCE_INLINE uint64_t _mm_crc32_u64(uint64_t crc, uint64_t v)
 #pragma pop_macro("FORCE_INLINE")
 #endif
 
-#define SSE2NEON (1)
-
 #if defined(__GNUC__)
 #pragma GCC pop_options
 #endif
+
+#define SSE2NEON (1)
 
 #endif
